@@ -70,7 +70,7 @@ async def get_ptitle(url):
             break
         c += 1
 
-    # pdisk.net link
+    # pdisklink.com link
     pdisk_video_id = list(found.split(":"))
     video_id = pdisk_video_id[2]
     video_id = list(video_id.split(","))
@@ -93,7 +93,7 @@ async def pdisk_up(link):
         title_new = os.path.basename(title_new.path)
         title_pdisk = '@' + CHANNEL + title_new
     res = requests.get(
-        'http://linkapi.net/open/create_item?link_type=link&content_src=' + link + '&source=2000&cover_url='+THUMB_URL+'&api_key=' + PDISK_API_KEY + '&dir_id=0&title=' + title_pdisk + '&description=Join_@MyTestBotZ_' + 'CHANNEL' + '_and_support_us')
+        'http://linkapi.net/open/create_item?link_type=link&content_src=' + link + '&source=2000&cover_url='+THUMB_URL+'&api_key=' + PDISK_API_KEY + '&dir_id=0&title=' + title_pdisk + '&description=Join @Moviezbarn' + 'CHANNEL' + '_and_support_us')
     data = res.json()
     data = dict(data)
     print(data)
@@ -147,8 +147,7 @@ async def remove_username(new_List):
 async def addFooter(str):
     footer = """
     
-<b> Note : Your Video File is Available on Above LINK ones Upload Process is Complete, it Take Time Depend on Your File Size & My Server Upload Speed
-So,be Patient </b>  😴😴😴😴     
+     
 ━━━━━━━━━━━━━━━
 ⦿ Made With 💝 BY @moviezbarn
 ━━━━━━━━━━━━━━━
