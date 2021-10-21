@@ -70,7 +70,7 @@ async def get_ptitle(url):
             break
         c += 1
 
-    # pdisklink.com link
+    # pdisks.com link
     pdisk_video_id = list(found.split(":"))
     video_id = pdisk_video_id[2]
     video_id = list(video_id.split(","))
@@ -98,7 +98,7 @@ async def pdisk_up(link):
     data = dict(data)
     print(data)
     v_id = data['data']['item_id']
-    v_url = 'https://www.pdisklink.com/share-video?videoid=' + v_id
+    v_url = 'https://www.pdisks.com/share-video?videoid=' + v_id
     return (v_url)
 
 
